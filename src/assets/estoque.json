@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "modelo": "Volkswagen Gol (Last Edition)",
+      "descricao": "O maior ícone das estradas brasileiras. Robusto, confiável e com valor de revenda imbatível.",
+      "preco": 95000,
+      "imagem": "https://images.noticiasautomotivas.com.br/img/f/volkswagen-gol-last-edition-1.jpg"
+    },
+    {
+      "id": 2,
+      "modelo": "Fiat Uno (Com Escada)",
+      "descricao": "Equipado com o kit aerodinâmico de escada no teto, garantindo 200cv extras de potência imaginária.",
+      "preco": 25000,
+      "imagem": "https://img.odcdn.com.br/wp-content/uploads/2021/12/fiat-uno-escada-768x432.jpg"
+    },
+    {
+      "id": 3,
+      "modelo": "Hyundai HB20",
+      "descricao": "O queridinho da cidade. Design moderno, conectividade total e fabricado em Piracicaba.",
+      "preco": 82000,
+      "imagem": "https://production.autoforce.com/uploads/foods/image/10578680/main_comprar-hb20-comfort-1-0-mt-2024-piracicaba-sao-paulo_2696081541.png"
+    },
+    {
+      "id": 4,
+      "modelo": "Jeep Compass",
+      "descricao": "O SUV médio mais vendido do país, orgulhosamente produzido no polo automotivo de Goiana, Pernambuco.",
+      "preco": 180000,
+      "imagem": "https://cdn.motor1.com/images/mgl/mMeB7K/s3/jeep-compass-serie-s-2025.jpg"
+    },
+    {
+      "id": 5,
+      "modelo": "Chevrolet Onix",
+      "descricao": "Líder em tecnologia na categoria, com Wi-Fi nativo e excelente economia de combustível.",
+      "preco": 78500,
+      "imagem": "https://production.autoforce.com/uploads/foods/image/9972332/main_comprar-onix-plus-lt-1-0-turbo-2024-campinas-sao-paulo_2854081014.png"
+    }
+  ]
