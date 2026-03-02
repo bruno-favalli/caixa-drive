@@ -1,0 +1,219 @@
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 800px;
+}
+
+/* --- Cartão do usuário --- */
+.perfil-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.perfil-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #302b63;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.perfil-info h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.perfil-detalhe {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.perfil-total {
+  margin: 0;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.badge-role {
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.badge-admin {
+  background: #e74c3c;
+  color: white;
+}
+.badge-vip {
+  background: #f39c12;
+  color: white;
+}
+.badge-standard {
+  background: #27ae60;
+  color: white;
+}
+
+/* --- Seção de reservas --- */
+.reservas-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.reservas-section h3 {
+  margin: 0 0 24px;
+  font-size: 1.2rem;
+  color: #302b63;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Estado vazio */
+.estado-vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 0;
+  color: #999;
+}
+
+.icone-vazio {
+  font-size: 3rem;
+}
+
+.estado-vazio p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.btn-catalogo {
+  padding: 10px 24px;
+  background: #302b63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.btn-catalogo:hover {
+  background: #24243e;
+}
+
+/* Lista de reservas */
+.reservas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reserva-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.reserva-item:hover {
+  background: #fafafa;
+}
+
+.reserva-img {
+  width: 100px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.reserva-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reserva-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+.reserva-info p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #888;
+  line-height: 1.4;
+}
+
+.reserva-preco {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #302b63;
+  margin-top: 4px;
+}
+
+.btn-cancelar {
+  padding: 8px 14px;
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.btn-cancelar:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+/* Rodapé com total */
+.reservas-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 2px solid #f0f0f0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.reservas-total strong {
+  font-size: 1.2rem;
+  color: #302b63;
+}

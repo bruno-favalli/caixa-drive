@@ -1,0 +1,124 @@
+.catalogo-header {
+  margin-bottom: 32px;
+}
+
+.catalogo-header h2 {
+  font-size: 1.8rem;
+  color: #302b63;
+  margin: 0 0 6px;
+}
+
+.catalogo-header p {
+  color: #777;
+  margin: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Card fica com borda verde quando reservado */
+.card.reservado {
+  border-color: #27ae60;
+  opacity: 0.85;
+}
+
+.card-imagem {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-reservado {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #27ae60;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-modelo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.card-descricao {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card-preco {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #302b63;
+}
+
+.btn-reservar {
+  padding: 8px 16px;
+  background: #302b63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-reservar:hover:not(:disabled) {
+  background: #24243e;
+}
+
+.btn-ja-reservado {
+  background: #27ae60 !important;
+  cursor: not-allowed;
+}

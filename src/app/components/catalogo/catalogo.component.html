@@ -1,0 +1,41 @@
+<div class="catalogo-header">
+  <h2>🚗 Catálogo de Veículos Elétricos</h2>
+  <p>Escolha seu próximo veículo e reserve com um clique</p>
+</div>
+
+<div class="cards-grid">
+  @for (veiculo of estoque(); track veiculo.id) {
+
+  <div class="card" [class.reservado]="jaReservado(veiculo.id)">
+    <div class="card-imagem">
+      <img [src]="veiculo.imagem" [alt]="veiculo.modelo" />
+
+      <!-- Badge aparece sobre a imagem quando já reservado -->
+      @if (jaReservado(veiculo.id)) {
+      <div class="badge-reservado">✅ Reservado</div>
+      }
+    </div>
+
+    <div class="card-body">
+      <h3 class="card-modelo">{{ veiculo.modelo }}</h3>
+      <p class="card-descricao">{{ veiculo.descricao }}</p>
+
+      <div class="card-footer">
+        <span class="card-preco">
+          {{ veiculo.preco | currency : 'BRL' : 'symbol' : '1.0-0' }}
+        </span>
+
+        <button
+          class="btn-reservar"
+          [class.btn-ja-reservado]="jaReservado(veiculo.id)"
+          (click)="reservar(veiculo)"
+          [disabled]="jaReservado(veiculo.id)"
+        >
+          {{ jaReservado(veiculo.id) ? '✅ Reservado' : '🔖 Reservar Veículo' }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  }
+</div>

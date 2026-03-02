@@ -1,0 +1,21 @@
+<div class="layout-wrapper">
+  <nav class="navbar">
+    <div class="navbar-brand">⚡ CaixaDrive</div>
+
+    <div class="navbar-links">
+      <a routerLink="/dashboard/catalogo" routerLinkActive="active-link"> 🚗 Catálogo </a>
+
+      <a routerLink="/dashboard/perfil" routerLinkActive="active-link"> 👤 Meu Perfil </a>
+    </div>
+
+    <div class="navbar-usuario">
+      <span class="badge-role badge-{{ role() }}">{{ role() | uppercase }}</span>
+      <span class="nome">{{ nomeUsuario() }}</span>
+      <button class="btn-sair" (click)="sair()">Sair</button>
+    </div>
+  </nav>
+
+  <main class="conteudo">
+    <router-outlet></router-outlet>
+  </main>
+</div>
