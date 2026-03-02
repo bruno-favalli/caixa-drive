@@ -1,0 +1,68 @@
+<div class="perfil-container">
+  <div class="perfil-card">
+    <div class="perfil-avatar">
+      {{ nomeUsuario().charAt(0).toUpperCase() }}
+    </div>
+
+    <div class="perfil-info">
+      <h2>{{ nomeUsuario() }}</h2>
+
+      <span class="badge-role badge-{{ role() }}">
+        {{ role() | uppercase }}
+      </span>
+
+      <p class="perfil-detalhe">
+        🔖 {{ veiculosReservados().length }}
+        {{ veiculosReservados().length === 1 ? 'veículo reservado' : 'veículos reservados' }}
+      </p>
+
+      @if (veiculosReservados().length > 0) {
+      <p class="perfil-total">
+        💰 Total em reservas:
+        <strong>{{ totalReservado() | currency : 'BRL' : 'symbol' : '1.0-0' }}</strong>
+      </p>
+      }
+    </div>
+  </div>
+
+  <!-- Seção de reservas -->
+  <div class="reservas-section">
+    <h3>Meus Veículos Reservados</h3>
+
+    <!-- Estado vazio — nenhuma reserva ainda -->
+    @if (veiculosReservados().length === 0) {
+    <div class="estado-vazio">
+      <span class="icone-vazio">🚗</span>
+      <p>Você ainda não reservou nenhum veículo.</p>
+      <button class="btn-catalogo" (click)="irParaCatalogo()">Explorar Catálogo</button>
+    </div>
+    }
+
+    <!-- Lista de reservas -->
+    @if (veiculosReservados().length > 0) {
+    <div class="reservas-lista">
+      @for (veiculo of veiculosReservados(); track veiculo.id) {
+      <div class="reserva-item">
+        <img [src]="veiculo.imagem" [alt]="veiculo.modelo" class="reserva-img" />
+
+        <div class="reserva-info">
+          <h4>{{ veiculo.modelo }}</h4>
+          <p>{{ veiculo.descricao }}</p>
+          <span class="reserva-preco">
+            {{ veiculo.preco | currency : 'BRL' : 'symbol' : '1.0-0' }}
+          </span>
+        </div>
+
+        <button class="btn-cancelar" (click)="cancelarReserva(veiculo.id)">✕ Cancelar</button>
+      </div>
+      }
+    </div>
+
+    <div class="reservas-total">
+      <span>Total em reservas</span>
+      <strong>{{ totalReservado() | currency : 'BRL' : 'symbol' : '1.0-0' }}</strong>
+    </div>
+
+    }
+  </div>
+</div>

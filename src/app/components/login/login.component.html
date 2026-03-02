@@ -1,0 +1,46 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <h1>⚡ CaixaDrive</h1>
+      <p>Portal de Veículos Elétricos</p>
+    </div>
+
+    <div class="login-form">
+      <div class="campo">
+        <label for="usuario">Usuário</label>
+        <input
+          id="usuario"
+          type="text"
+          placeholder="Digite seu usuário"
+          [value]="usuario()"
+          (input)="usuario.set($any($event.target).value)"
+        />
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input
+          id="senha"
+          type="password"
+          placeholder="Digite sua senha"
+          [value]="senha()"
+          (input)="senha.set($any($event.target).value)"
+        />
+      </div>
+
+      <!-- Exibe mensagem de erro se erroLogin não estiver vazio -->
+      @if (erroLogin()) {
+      <div class="erro">{{ erroLogin() }}</div>
+      }
+
+      <button (click)="entrar()" [disabled]="carregando()" class="btn-entrar">
+        {{ carregando() ? 'Verificando...' : 'Entrar no Portal' }}
+      </button>
+    </div>
+
+    <div class="login-dica">
+      <p>Acesso de teste:</p>
+      <p><strong>admin</strong> / admin123 &nbsp;|&nbsp; <strong>joao.vip</strong> / senha123</p>
+    </div>
+  </div>
+</div>
